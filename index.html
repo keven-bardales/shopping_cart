@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <table id="product-table">
+      <thead>
+        <tr>
+          <th>SKU</th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Add to Cart</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SKU001</td>
+          <td>Product A</td>
+          <td>$10.00</td>
+          <td>
+            <button
+              class="add-to-cart-btn"
+              data-sku="SKU001"
+              data-product="Product A"
+              data-price="10.00"
+            >
+              Add to Cart
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>SKU002</td>
+          <td>Product B</td>
+          <td>$20.00</td>
+          <td>
+            <button
+              class="add-to-cart-btn"
+              data-sku="SKU002"
+              data-product="Product B"
+              data-price="20.00"
+            >
+              Add to Cart
+            </button>
+          </td>
+        </tr>
+        <!-- More product rows here -->
+      </tbody>
+    </table>
+
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>SKU</th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="cart-table-body"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Total:</td>
+          <td id="cart-total">$0.00</td>
+        </tr>
+        <tr>
+          <td colspan="5"><button id="buy-btn">Buy</button></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
